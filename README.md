@@ -1,42 +1,42 @@
-# 🦸 Desafio Classificador de Nível de Herói
+# 🕹️ Calculadora de Partidas Rankeadas
 
-Projeto desenvolvido como parte do desafio da DIO, com o objetivo de praticar lógica de programação utilizando variáveis, operadores, estruturas de decisão e laços de repetição.
+Projeto desenvolvido como parte do desafio da DIO, com o objetivo de praticar lógica de programação utilizando variáveis, operadores, estruturas de decisão, laços de repetição e funções em JavaScript.
 
 ## 🚀 Tecnologias
 - JavaScript
 
 ## 🎯 Objetivo
-Classificar o nível de um herói com base na sua quantidade de experiência (XP).
+Criar uma função que recebe a quantidade de vitórias e derrotas de um jogador, calcula o saldo de partidas rankeadas e determina o nível do jogador com base nas vitórias.
 
-### Classificações
-- Ferro: XP < 1.000  
-- Bronze: 1.001 – 2.000  
-- Prata: 2.001 – 5.000  
-- Ouro: 5.001 – 7.000  
-- Platina: 7.001 – 8.000  
-- Ascendente: 8.001 – 9.000  
-- Imortal: 9.001 – 10.000  
-- Radiante: XP ≥ 10.001  
+### Classificações de Nível
+- Ferro: vitórias < 10  
+- Bronze: 11 – 20  
+- Prata: 21 – 50  
+- Ouro: 51 – 80  
+- Diamante: 81 – 90  
+- Lendário: 91 – 100  
+- Imortal: vitórias ≥ 101  
 
 ## 🖥️ Execução
 Para rodar o projeto, abra o terminal na pasta do projeto e execute:
 
 ```bash
-node src/index.js
+node index.js
 ```
 
 ## 📌 Saída esperada
 
 ```
-O Herói de nome Zelda está no nível de Platina
-O Herói de nome Link está no nível de Ferro
-O Herói de nome Ganondorf está no nível de Radiante
+O jogador Artemis tem saldo de 50 e está no nível de Ouro
+O jogador Link tem saldo de -5 e está no nível de Bronze
+O jogador Ganondorf tem saldo de 95 e está no nível de Imortal
+O jogador Sheik tem saldo de 12 e está no nível de Prata
 ```
 
-## 💡 Como adicionar novos heróis
+## 💡 Como adicionar novos jogadores
 
-Basta incluir um novo objeto dentro do array `herois` em `src/index.js`:
+Basta incluir um novo objeto no array `jogadores` dentro do arquivo `index.js`:
 
 ```js
-{ nome: "NovoHerói", xp: 5000 }
+{ nome: "NovoJogador", vitorias: 60, derrotas: 10 }
 ```
