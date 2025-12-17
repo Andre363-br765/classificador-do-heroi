@@ -1,25 +1,36 @@
-// Retorna o nível do herói baseado no XP
-function classificarNivel(xp) {
-  if (xp < 1000) return "Ferro";
-  if (xp <= 2000) return "Bronze";
-  if (xp <= 5000) return "Prata";
-  if (xp <= 7000) return "Ouro";
-  if (xp <= 8000) return "Platina";
-  if (xp <= 9000) return "Ascendente";
-  if (xp <= 10000) return "Imortal";
-  return "Radiante";
+class Heroi {
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
+
+  atacar() {
+    let ataque = "";
+
+    if (this.tipo === "mago") {
+      ataque = "magia";
+    } else if (this.tipo === "guerreiro") {
+      ataque = "espada";
+    } else if (this.tipo === "monge") {
+      ataque = "artes marciais";
+    } else if (this.tipo === "ninja") {
+      ataque = "shuriken";
+    }
+
+    console.log(`o ${this.tipo} atacou usando ${ataque}`);
+  }
 }
 
-// Heróis e XP
+// Criando heróis
 const herois = [
-  { nome: "Zelda", xp: 7200 },
-  { nome: "Link", xp: 950 },
-  { nome: "Ganondorf", xp: 15000 }
+  new Heroi("Merlin", 150, "mago"),
+  new Heroi("Arthur", 35, "guerreiro"),
+  new Heroi("Lee", 40, "monge"),
+  new Heroi("Hanzo", 28, "ninja")
 ];
 
-// Exibe nome e nível de cada herói
+// Executando ataques
 for (const heroi of herois) {
-  console.log(
-    `O Herói de nome ${heroi.nome} está no nível de ${classificarNivel(heroi.xp)}`
-  );
+  heroi.atacar();
 }
