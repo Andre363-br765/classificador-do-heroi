@@ -21,7 +21,7 @@ Criar uma função que recebe a quantidade de vitórias e derrotas de um jogador
 Para rodar o projeto, abra o terminal na pasta do projeto e execute:
 
 ```bash
-node index.js
+node src/index.js
 ```
 
 ## 📌 Saída esperada
